@@ -1,20 +1,15 @@
 <style>
     @font-face {
-        font-family: 'nameFont';
-        src: url('font/font.ttf')  format('truetype')
-    }
-
-    @font-face {
-        font-family: 'dateFont';
-        src: url('font/date.ttf')  format('truetype')
+        font-family: 'font';
+        src: url('font/blackway-brush.regular.otf')  format('truetype')
     }
     
     .name {
         position: absolute;
         top: 480px;
-        left: 450px;
+        left: 480px;
         transform: translate(-50%, -50%);
-        font-family: "nameFont", cursive;
+        font-family: "font", cursive;
         opacity: 40%;
         color: #111111;
         text-align: left;
@@ -27,7 +22,7 @@
         top: 482px;
         left: 700px;
         transform: translate(-50%, -50%);
-        font-family: "dateFont", cursive;
+        font-family: "font", cursive;
         opacity: 30%;
         color: #111111;
         text-align: left;
@@ -62,6 +57,6 @@
     if (dd < 10) dd = '0' + dd;
     if (mm < 10) mm = '0' + mm;
 
-    const formattedToday = dd + '.' + mm + '.' + yyyy;
+    const formattedToday = dd + '/' + mm;
     document.getElementById('date').innerHTML = formattedToday;
 </script>
